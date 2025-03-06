@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic AI GenAI Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>GenAI Strategic Assessment</h1>
+            <p>This assessment helps identify opportunities to maximize your organization's generative AI potential.</p>
+        </header>
+        
+        <form id="questionnaireForm">
+            <!-- Question 1: Leadership Awareness Slider -->
+            <div class="question-container">
+                <h3>How would you rate your executive team's understanding of generative AI capabilities?</h3>
+                <div class="slider-container">
+                    <input type="range" min="1" max="10" value="5" class="slider" id="leadershipAwareness">
+                    <div class="slider-labels">
+                        <span>Limited awareness</span>
+                        <span>Basic understanding</span>
+                        <span>Comprehensive understanding</span>
+                    </div>
+                    <p class="slider-value">Value: <span id="leadershipAwarenessValue">5</span>/10</p>
+                </div>
+            </div>
+            
+            <!-- Question 2: Current Implementation Multiple Choice -->
+            <div class="question-container">
+                <h3>Which generative AI tools or platforms is your organization currently using?</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="currentTools" value="chatgpt"> ChatGPT/Claude (consumer tools)</label>
+                    <label><input type="checkbox" name="currentTools" value="copilot"> Microsoft Copilot</label>
+                    <label><input type="checkbox" name="currentTools" value="gemini"> Google Gemini/Duet AI</label>
+                    <label><input type="checkbox" name="currentTools" value="custom"> Custom AI solutions</label>
+                    <label><input type="checkbox" name="currentTools" value="industry"> Industry-specific AI tools</label>
+                    <label><input type="checkbox" name="currentTools" value="none"> None yet</label>
+                    <label><input type="checkbox" name="currentTools" value="other"> Other</label>
+                </div>
+            </div>
+            
+            <!-- Question 3: Adoption Level Slider -->
+            <div class="question-container">
+                <h3>What percentage of your workforce is actively using generative AI tools in their daily work?</h3>
+                <div class="slider-container">
+                    <input type="range" min="0" max="100" value="10" class="slider" id="adoptionLevel">
+                    <div class="slider-labels">
+                        <span>0%</span>
+                        <span>50%</span>
+                        <span>100%</span>
+                    </div>
+                    <p class="slider-value">Value: <span id="adoptionLevelValue">10</span>%</p>
+                </div>
+            </div>
+            
+            <!-- Question 4: Business Priorities Multiple Choice -->
+            <div class="question-container">
+                <h3>Which business outcomes are you most interested in achieving with generative AI?</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="priorities" value="efficiency"> Increased operational efficiency</label>
+                    <label><input type="checkbox" name="priorities" value="costs"> Cost reduction</label>
+                    <label><input type="checkbox" name="priorities" value="innovation"> Innovation acceleration</label>
+                    <label><input type="checkbox" name="priorities" value="customer"> Enhanced customer experiences</label>
+                    <label><input type="checkbox" name="priorities" value="decisions"> Improved decision making</label>
+                    <label><input type="checkbox" name="priorities" value="competitive"> Competitive advantage</label>
+                    <label><input type="checkbox" name="priorities" value="productivity"> Employee productivity</label>
+                    <label><input type="checkbox" name="priorities" value="other"> Other</label>
+                </div>
+            </div>
+            
+            <!-- Question 5: Implementation Challenges -->
+            <div class="question-container">
+                <h3>What are your organization's biggest concerns about implementing generative AI?</h3>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="challenges" value="security"> Data security and privacy</label>
+                    <label><input type="checkbox" name="challenges" value="cost"> Cost of implementation</label>
+                    <label><input type="checkbox" name="challenges" value="integration"> Integration with existing systems</label>
+                    <label><input type="checkbox" name="challenges" value="workforce"> Workforce adaptation</label>
+                    <label><input type="checkbox" name="challenges" value="quality"> Quality/reliability of AI outputs</label>
+                    <label><input type="checkbox" name="challenges" value="governance"> Governance and policy concerns</label>
+                    <label><input type="checkbox" name="challenges" value="roi"> Return on investment uncertainty</label>
+                    <label><input type="checkbox" name="challenges" value="other"> Other</label>
+                </div>
+            </div>
+            
+            <!-- Question 6: Implementation Timeline Radio Buttons -->
+            <div class="question-container">
+                <h3>What is your expected timeline for implementing or expanding generative AI capabilities?</h3>
+                <div class="radio-group">
+                    <label><input type="radio" name="timeline" value="already"> Already implementing</label>
+                    <label><input type="radio" name="timeline" value="3months"> Within 3 months</label>
+                    <label><input type="radio" name="timeline" value="3-6months"> 3-6 months</label>
+                    <label><input type="radio" name="timeline" value="6-12months"> 6-12 months</label>
+                    <label><input type="radio" name="timeline" value="12months+"> More than 12 months</label>
+                    <label><input type="radio" name="timeline" value="noTimeline"> No specific timeline</label>
+                </div>
+            </div>
+            
+            <!-- Question 7: Open Question -->
+            <div class="question-container">
+                <h3>What specific business challenge would you like to address first with generative AI?</h3>
+                <textarea id="businessChallenge" name="businessChallenge" rows="4" placeholder="Please describe your most pressing business challenge..."></textarea>
+            </div>
+            
+            <!-- Question 8: Budget Range Dropdown -->
+            <div class="question-container">
+                <h3>What is your approximate budget range for generative AI initiatives in the next 12 months?</h3>
+                <div class="select-container">
+                    <select id="budgetRange" name="budgetRange">
+                        <option value="">Please select...</option>
+                        <option value="under50k">Under €50,000</option>
+                        <option value="50k-100k">€50,000 - €100,000</option>
+                        <option value="100k-250k">€100,000 - €250,000</option>
+                        <option value="250k-500k">€250,000 - €500,000</option>
+                        <option value="500k+">€500,000+</option>
+                        <option value="undetermined">Undetermined</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="question-container">
+                <h3>Your Contact Information</h3>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="title">Job Title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone (Optional):</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="submit-container">
+                <button type="submit" id="submitBtn">Submit Assessment</button>
+            </div>
+        </form>
+        
+        <!-- Thank You Message (Hidden by default) -->
+        <div id="thankYouMessage" class="hidden">
+            <h2>Thank You for Completing the Assessment!</h2>
+            <p>We've received your responses and will analyze your organization's generative AI readiness.</p>
+            <p>A Strategic AI consultant will be in touch within 24 hours to discuss your results and potential next steps.</p>
+            <button id="restartBtn">Take Assessment Again</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
